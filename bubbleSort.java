@@ -2,7 +2,7 @@ package com.company;
 import java.util.Arrays;
 import java.util.Random;
 //Implement an Array Structure
-
+//Stable Sort vs Unstable Sort, Bubble sort is a stable sort algorithm
 
 public class Main{
 	public static void main(String[] args)
