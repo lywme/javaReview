@@ -24,9 +24,9 @@ public class Main{
 
 	public static void bubbleSort(int[] arr)
 	{
-		for(int lastUnsortedPart=arr.length-1;lastUnsortedPart>0;lastUnsortedPart--)
+		for(int lastUnsortedPart=arr.length-2;lastUnsortedPart>0;lastUnsortedPart--)
 		{
-			for(int j=0;j<lastUnsortedPart;j++)
+			for(int j=0;j<=lastUnsortedPart;j++)
 			{
 				if(arr[j]>arr[j+1])
 				{
