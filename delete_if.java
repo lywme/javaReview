@@ -4,10 +4,10 @@ public class scratch
 {
     public static void main(String[] args)
     {
-        Node newList=createLinkedList(Arrays.asList(1,2,3,2,5));
+        Node newList=createLinkedList(Arrays.asList(2,2,1,2,5));
         Node.print(newList);
-        delete_if(newList,2);
-        Node.print(newList);
+        
+        Node.print(delete_if(newList,2));
 
     }
 
@@ -32,26 +32,32 @@ public class scratch
         return listHead;
     }
 
-    public static void delete_if(Node head,int n)
+    public static Node delete_if(Node head,int value)
     {
         Node curr=head;
         Node prev=null;
         //建立一个dummy head
         Node newHead=new Node(0);
         newHead.setNext(curr);
+        prev=newHead;
 
         while(curr!=null)
         {
-            if(curr.getValue()==n)
+            if(curr.getValue()==value)
             {
+
                 prev.setNext(curr.getNext());
             }
-            prev=curr;
+            else
+            {
+                prev=curr;
+
+            }
             curr=curr.getNext();
         }
 
         //结果要跳过dummy head
-        head=newHead.getNext();
+        return newHead.getNext();
     }
 }
 
