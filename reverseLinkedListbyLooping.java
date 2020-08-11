@@ -19,12 +19,20 @@ public class scratch
     public static Node createLinkedList(List<Integer> inputlist)
     {
         Node listHead=null;
-
+        Node prev=null;
         for(Integer item:inputlist)
         {
             Node newNode=new Node(item);
-            newNode.setNext(listHead);
-            listHead=newNode;
+            if(prev!=null)
+            {
+                prev.setNext(newNode);
+            }
+            if(listHead==null)
+            {
+                listHead=newNode;
+            }
+
+            prev=newNode;
         }
         return listHead;
     }
