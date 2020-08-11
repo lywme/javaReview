@@ -33,18 +33,16 @@ public class scratch
      * @param take a head node of a linked list
      * @return the head of the List in reverse order
      */
-    public static Node reverseLinkedList(Node currentHead)
+    public static Node reverseLinkedList(Node head)
     {
         Node newHead=null;
-
+        Node currentHead=head;
         while(currentHead!=null)
         {
-            Node newNode=new Node(currentHead.getValue());
-            newNode.setNext(newHead);
-
-            newHead=newNode;
-            currentHead=currentHead.getNext();
-
+            Node next=currentHead.getNext();
+            currentHead.setNext(newHead);
+            newHead=currentHead;
+            currentHead=next;
         }
 
         return newHead;
