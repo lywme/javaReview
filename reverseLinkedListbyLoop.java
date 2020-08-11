@@ -18,14 +18,15 @@ public class scratch
 
     public static Node createLinkedList(List<Integer> inputlist)
     {
-        if(inputlist.size()==0)
+        Node listHead=null;
+
+        for(Integer item:inputlist)
         {
-            return null;
+            Node newNode=new Node(item);
+            newNode.setNext(listHead);
+            listHead=newNode;
         }
-        Node newNode=new Node(inputlist.get(0));
-        Node listHead=createLinkedList(inputlist.subList(1,inputlist.size()));
-        newNode.setNext(listHead);
-        return newNode;
+        return listHead;
     }
 
     /**
