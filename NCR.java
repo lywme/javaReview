@@ -49,10 +49,9 @@ public class scratch
     //linear time complexity
     public static void sortToRight2(int[] inputArr)
     {
-        for(int i=inputArr.length-1;i>=0;i--)
+        for(int i=inputArr.length-2;i>=0;i--)
         {
-            if(i+1<inputArr.length)
-                inputArr[i]=Math.max(inputArr[i],inputArr[i+1]);
+            inputArr[i]=Math.max(inputArr[i],inputArr[i+1]);
         }
     }
 }
