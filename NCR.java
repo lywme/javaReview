@@ -5,20 +5,7 @@ import java.util.stream.Stream;
 public class scratch
 {
 
-    /*
-    Question:
 
-    Given an arry of integers that is not sorted, find the maximum number to the right (the same or higher index) of each integer in the array.
-
-    E.g.
-
-    Input:
-    [ 9,  13,  7, 10, 0, 6 ]
-
-    Output:
-
-    [ 13, 13, 10, 10, 6, 6 ]
-     */
 
     public static void main(String[] args)
     {
