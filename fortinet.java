@@ -24,11 +24,7 @@ public class scratch
             char[] charArr=name.toCharArray();
             for(int i=0;i<name.length();i++)
             {
-                if(charArr[i]>='a' && charArr[i]<='z')
-                {
-                    charArr[i]=Character.toUpperCase(charArr[i]);
-                }
-                else
+                if(charArr[i]>='A' && charArr[i]<='Z')
                 {
                     charArr[i]=Character.toLowerCase(charArr[i]);
                 }
